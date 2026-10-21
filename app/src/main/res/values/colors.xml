@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sage_primary">#2F5D44</color>
+    <color name="sage_dark">#1E3F2D</color>
+    <color name="sage_container">#254D37</color>
+    <color name="mint_light">#EAF2EC</color>
+    <color name="mint_accent">#D2E3D4</color>
+    <color name="cream_background">#F7F9F6</color>
+    <color name="text_dark">#1A2E22</color>
+    <color name="text_muted">#5A7363</color>
+    <color name="warning_orange">#E07A5F</color>
+    <color name="white">#FFFFFF</color>
+</resources>

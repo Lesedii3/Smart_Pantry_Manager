@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/tvItemInitial"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@color/mint_light"
+            android:gravity="center"
+            android:text="E"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/sage_primary"
+            android:layout_marginEnd="14dp" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eggs"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark" />
+
+            <TextView
+                android:id="@+id/tvItemExpiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 pieces · Best before 18 May"
+                android:textSize="12sp"
+                android:textColor="@color/text_muted"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/viewWarningDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@color/warning_orange"
+            android:layout_marginEnd="16dp" />
+
+
+        <ImageView
+            android:id="@+id/ivEditItem"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_menu_edit"
+            android:tint="@color/text_dark"
+            android:contentDescription="Edit item" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EAEFEA" />
+
+</LinearLayout>
