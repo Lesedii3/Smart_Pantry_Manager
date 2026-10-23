@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
-    android:padding="16dp"
-    android:layout_marginVertical="8dp" />
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/white">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-<TextView
-android:id="@+id/tvRecipeTitle"
-android:layout_width="0dp"
-android:layout_height="wrap_content"
-android:layout_weight="1"
-android:text="Avocado Toast with Egg"
-android:textSize="18sp"
-android:textStyle="bold"
-android:textColor="@color/sage_dark" />
+            <TextView
+                android:id="@+id/tvRecipeTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Avocado Toast with Egg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/sage_dark" />
 
-<TextView
-android:id="@+id/tvMatchPercentage"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:background="@color/mint_accent"
-android:textColor="@color/sage_dark"
-android:text="100% Match"
-android:textSize="11sp"
-android:textStyle="bold"
-android:paddingHorizontal="8dp"
-android:paddingVertical="4dp"
-    />
+            <TextView
+                android:id="@+id/tvMatchPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/mint_accent"
+                android:textColor="@color/sage_dark"
+                android:text="100% Match"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp" />
+        </LinearLayout>
 
-<TextView
-android:id="@+id/tvRecipeIngredients"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Ingredients: Bread, Avocado, Egg, Olive Oil"
-android:textSize="13sp"
-android:textColor="@color/text_dark"
-android:layout_marginTop="8dp" />
-
-
-
-
-
-
+        <TextView
+            android:id="@+id/tvRecipeIngredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingredients: Bread, Avocado, Egg, Olive Oil"
+            android:textSize="13sp"
+            android:textColor="@color/text_dark"
+            android:layout_marginTop="8dp" />
 
     </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
