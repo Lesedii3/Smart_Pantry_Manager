@@ -1,5 +1,5 @@
- What is SmartPantry?
-
+ # What is SmartPantry?
+https://github.com/Lesedii3/Smart_Pantry_Manager.git
 Ever open the fridge, stare into the cold, empty abyss, and say: "There's  nothing to eat"—even though it's stuffed full of random stuff?
 
 SmartPantry is your personal, AI-powered kitchen sidekick that turns your chaotic fridge into a delicous meal.
