@@ -37,7 +37,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.material)
     //for displaying pantry ingredients
-    implementation("andriodx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
     //Fragment support for Pantry,Recipes and also the settings screens
     implementation("androidx.fragment:fragment:1.8.6")
     testImplementation(libs.junit)

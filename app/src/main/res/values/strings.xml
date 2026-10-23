@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Smart Pantry App</string>
+    <string name="pantry_title">SMART PANTRY</string>
+    <string name="my_pantry">My pantry</string>
+    <string name="items_stored">items stored</string>
+    <string name="expiring_soon">expiring soon</string>
+    <string name="ingredients_header">Ingredients</string>
+    <string name="sort_expiry">Sort: Expiry</string>
+    <string name="ready_to_cook">READY TO COOK</string>
+    <string name="strict_badge">✓ Strict</string>
+    <string name="suggested_recipes">Suggested recipes</string>
+    <string name="pantry_banner_title">Everything is already in your pantry</string>
+    <string name="pantry_banner_subtitle">Only complete ingredient matches are shown.</string>
+    <string name="add_ingredient">Add ingredient</string>
+    <string name="ingredient_name_label">Ingredient name</string>
+    <string name="name_hint">Tomatoes</string>
+    <string name="name_guideline">Use a simple singular or plural name</string>
+    <string name="quantity_label">Quantity</string>
+    <string name="unit_label">Unit</string>
+    <string name="expiry_date_label">Expiry date</string>
+    <string name="expiry_optional">Optional</string>
+    <string name="validation_title">Validation example</string>
+    <string name="validation_msg">Quantity must be greater than zero.</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_save">✓ Save item</string>
 </resources>
