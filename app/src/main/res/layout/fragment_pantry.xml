@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/cream_background"
     android:padding="20dp">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SMART PANTRY"
+        android:text="@string/pantry_title"
         android:textSize="12sp"
         android:textStyle="bold"
         android:letterSpacing="0.1"
@@ -21,79 +21,83 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My pantry"
+        android:text="@string/my_pantry"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/text_dark"
         android:layout_marginBottom="16dp" />
 
-
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/sage_container"
-        android:paddingVertical="20dp"
-        android:gravity="center_vertical"
+        app:cardBackgroundColor="@color/sage_container"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
         android:layout_marginBottom="24dp">
 
-
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:orientation="horizontal"
+            android:paddingVertical="20dp"
+            android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="12"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="@color/white" />
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
 
-            <TextView
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/tvItemsStoredCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/items_stored"
+                    android:textSize="12sp"
+                    android:textColor="@color/mint_accent"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:background="#4A755D" />
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="items stored"
-                android:textSize="12sp"
-                android:textColor="@color/mint_accent"
-                android:layout_marginTop="2dp" />
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvExpiringSoonCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expiring_soon"
+                    android:textSize="12sp"
+                    android:textColor="@color/mint_accent"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
         </LinearLayout>
-
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="32dp"
-            android:background="#4A755D" />
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="expiring soon"
-                android:textSize="12sp"
-                android:textColor="@color/mint_accent"
-                android:layout_marginTop="2dp" />
-        </LinearLayout>
-    </LinearLayout>
-
+    </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -106,7 +110,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ingredients"
+            android:text="@string/ingredients_header"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/text_dark" />
@@ -114,11 +118,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sort: Expiry"
+            android:text="@string/sort_expiry"
             android:textSize="12sp"
             android:textColor="@color/text_muted" />
     </LinearLayout>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPantryItems"

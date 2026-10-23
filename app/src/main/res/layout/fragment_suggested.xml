@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/cream_background"
     android:padding="20dp">
 
-    <!-- Header Row -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,61 +19,71 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="READY TO COOK"
+            android:text="@string/ready_to_cook"
             android:textSize="12sp"
             android:textStyle="bold"
             android:letterSpacing="0.1"
             android:textColor="@color/sage_primary" />
 
-        <!-- Strict Badge -->
-        <TextView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/mint_accent"
-            android:textColor="@color/sage_dark"
-            android:text="✓ Strict"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="6dp" />
+            app:cardBackgroundColor="@color/mint_accent"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sage_dark"
+                android:text="@string/strict_badge"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp" />
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Suggested recipes"
+        android:text="@string/suggested_recipes"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/text_dark"
         android:layout_marginBottom="16dp" />
 
-    <!-- Info Banner Card -->
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/mint_light"
-        android:padding="16dp"
+        app:cardBackgroundColor="@color/mint_light"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
         android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Everything is already in your pantry"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/text_dark" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Only complete ingredient matches are shown."
-            android:textSize="12sp"
-            android:textColor="@color/text_muted"
-            android:layout_marginTop="2dp" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pantry_banner_title"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark" />
 
-    <!-- Match Count & Status -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pantry_banner_subtitle"
+                android:textSize="12sp"
+                android:textColor="@color/text_muted"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,10 +92,11 @@
         android:layout_marginBottom="12dp">
 
         <TextView
+            android:id="@+id/tvMatchCount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="3 matches"
+            android:text="0 matches"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/text_dark" />
@@ -98,7 +109,6 @@
             android:textColor="@color/text_muted" />
     </LinearLayout>
 
-    <!-- RecyclerView for Recipes -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSuggestedRecipes"
         android:layout_width="match_parent"
